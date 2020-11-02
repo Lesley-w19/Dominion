@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-align: center;
     scroll-behavior: smooth;
-    /* transition: all 10s ease-in; */
+    cursor: pointer;
 }
 ul{
     list-style: none;
@@ -355,12 +355,14 @@ background-color: rgba(176, 196, 222, 0.514);
         border: .05rem solid rgba(119, 136, 153, 0.671);
         text-align: center;
        }
+       .section1, .section2, .section3{
+           transition: all .4s ease-in-out;
+       }
        .about{
            font-size: 1.5rem;
        }
       #info{
           visibility: hidden;
-          transition: visibility  .4s  ease-in-out .3s;
       }
       .sectionAbout:hover #info{
           visibility: visible;
@@ -394,7 +396,7 @@ background-color: rgba(176, 196, 222, 0.514);
        .link li:hover .icone{
         color: orangered;
         margin-top: .2rem;
-        transition: all .3s ease-in;
+        transition: all .5s ease-in;
         visibility: visible;
        }
     
