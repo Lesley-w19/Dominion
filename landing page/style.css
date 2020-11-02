@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    scroll-behavior: smooth;
+    /* transition: all 10s ease-in; */
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.2rem;
+}
+h4{
+    font-size: 1.1rem;
+}
+h5,h6{
+    font-size: .9rem;
+}
+body{
+    position: absolute;
+}
+header .header{
+    /* background-color: rgba(119, 136, 153, 0.863); */
+    background-color: rgba(0, 0, 0, 0.863);
+    padding: 1.5rem;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.icon{
+   color: orangered;
+    margin-left: .5rem;
+}
+.title {
+    margin-top: -.4rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    color: #ebe1e1;
+    line-height: 1.3rem;
+}
+.title span{
+    font-size: 1.7rem;
+    font-family: forte;
+    text-transform: capitalize;
+    font-style: italic;
+    letter-spacing: .4rem;
+}
+ .navBtn{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    margin: 1rem;
+    cursor: pointer;
+}
+.navBtn button{
+   cursor: pointer;
+   width: 24px;
+   height: 2px;
+}
+.navButton1{
+    margin-bottom: .4rem;
+}
+.btn1{
+    transform: rotate(-45deg);
+    transition: .2s ease-in-out;
+    margin: 0;
+}
+ .btn2{
+    transform: rotate(45deg);
+    transition: .4s ease-in-out;
+    position: absolute;
+    top: 10%;
+}
+.navbar{
+    background-color: white;
+    flex-direction: column;
+    height: 0vh;
+    overflow-y: hidden; 
+    transition: all 2s ease-in-out;
+}
+.active{
+   height: 68vh;
+}
+
+.navbar .abt li{
+    margin: 1rem auto 0.2rem auto;
+    padding: 1.2rem;
+    border-bottom: .05rem solid black;
+}
+.navbar .abt a{
+   color: black;
+}
+.navbar .about{
+    letter-spacing: .3rem;
+    line-height: 1rem;
+}
+.navbar .about:hover{
+    color: orangered;
+    transition: color .3s ease-in;
+}
+.navbar .about span{
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    font-family: monotype corsiva;
+    text-transform: capitalize;
+}
+.navbar .place{
+    margin-top: .6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-transform: uppercase;
+     font-size: 1.2rem;
+}
+.navbar .navlinks{
+    background-color: rgba(0, 0, 0, 0.863);
+    margin-bottom: .2rem;
+}
+.navlinks ul{
+    display: flex;
+    justify-content: center;
+}
+.navlinks ul li{
+    margin: 1rem 1rem .5rem 1rem;
+    padding: .2rem;
+}
+.navlinks ul li a{
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    letter-spacing: .1rem;
+    border-bottom: .05rem solid white;
+}
+.navlinks a:hover{
+      color: orangered;
+    border-bottom: .05rem solid orangered;
+    transition: all .4s ease-in;
+}
+.navlinks .copy{
+    margin: 0.5rem auto 0.2rem auto;
+    padding-bottom: .5rem;
+    color: orangered;
+}
+.section0{
+    padding: 2rem;
+    border-top: .1rem solid white;
+    border-bottom:.1rem solid white ;
+    background-color: transparent;
+    letter-spacing: .2rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: .6rem;
+    text-transform: uppercase;
+    color: rgb(245, 72, 9);
+}
+div a{
+  text-decoration: none;    
+}
+div a:hover{
+    color: orangered;
+  transition: color .3s ease-in-out;
+
+}
+.section1{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/coffeshop.jpg) center no-repeat;
+    background-size: cover;
+    background-position: center;
+   padding: 6rem;
+   border-bottom: .1rem solid white;
+}
+.section1:hover{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/coffeshop.jpg) center no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.section2{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/bakery.jpg) center no-repeat;
+    background-size: cover;
+    background-position: center;
+   padding: 6rem;
+   border-bottom: .1rem solid white;
+}
+.section2:hover{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/bakery.jpg) center no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.section3{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/restaurant.jpg) center no-repeat;
+    background-size: cover;
+    background-position: center;
+   padding: 6rem;
+   border-bottom: .1rem solid white;
+}
+.section3:hover{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/restaurant.jpg) center no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.about{
+    color: white;
+    letter-spacing: .3rem;
+    line-height: 1.3rem;
+}
+.about span{
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    font-family: monotype corsiva;
+    text-transform: capitalize;
+}
+.place{
+    margin-top: .5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-transform: uppercase;
+     font-size: 1.6rem;
+}
+.footer{
+    padding-bottom:2.5rem;
+background-color: rgba(176, 196, 222, 0.514);
+}
+.links li{
+    margin: 0 2rem;
+    padding: 1rem 1rem;
+    border-bottom: .05rem solid rgba(119, 136, 153, 0.671);
+
+}
+.links a{
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-decoration: none;
+     letter-spacing: .21rem;
+     text-transform: uppercase;
+     color: black;
+}
+.links a:hover{
+    background-color: rgba(0, 0, 0, 0.055) ;
+    color: orangered;
+    transition: all .2s ease-out;
+}
+.icone, .icone-header{
+    visibility: hidden;
+}
+.media{
+    margin-top: 2rem;
+    letter-spacing: .1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.media ul{
+  margin-bottom: 1rem;
+    
+}
+.media a{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+  margin-left: 1rem;
+}
+.media a span{
+   font-size: .7rem;
+   color: black;
+}
+.media a:hover{
+    color: black;
+}
+.media h4{
+    margin-top: .5rem;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: .8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.copy{
+    margin: 2rem 0rem .6rem 0rem;
+    font-family: monotype corsiva;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+}
+.media h5{
+    text-transform: uppercase;
+    font-size: .6rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .2rem;
+    font-weight: bolder;
+}
+
+
+
+@media (min-width:900px){
+       body{
+           height: 100vh;
+           display: flex;
+        flex-direction:row;
+        justify-content: space-around; 
+       }
+       .header{
+           position: relative;
+       }
+       .navBtn{
+           position: absolute;
+           top: 5%;
+           left: 40%;
+       }
+       .ttl{
+       position: absolute;
+       top: 40%;
+       left: 22%;
+       }
+       .icone-header{
+           visibility: visible;
+           position: absolute;
+           bottom: 10%;
+           border-bottom: .05rem solid white;
+
+       }
+       
+       header div{
+           height: 100vh;
+           display: flex;
+           flex-direction: column;
+           text-align: center;
+       }
+       footer{
+        border: .05rem solid rgba(119, 136, 153, 0.671);
+        text-align: center;
+       }
+      
+       .links ul{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           border-bottom: .05rem solid rgba(119, 136, 153, 0.671);
+       }
+       .links li{
+           margin: 1rem auto;
+           display: flex;
+           flex-direction: column;
+           border: none;
+           border-right: .05rem solid rgba(119, 136, 153, 0.349);
+       }
+       .links li:nth-child(3){
+           border-right: none;
+       }
+       .link a{
+           text-align: center;
+       }
+
+       .links a:hover{
+              background-color: transparent;
+              color: black;
+           font-size: 1.05rem;
+       }
+       .icone{
+           visibility: hidden;
+           color: orangered;
+           transition: all 1s ease-in;
+       }
+        .icone-show{
+           visibility: visible;
+       }
+    
+       .media{
+            margin: 1.2rem .5rem .1rem .5rem;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           flex-wrap: wrap;
+           font-size: 1rem;
+       }
+       .copy,.media h5{
+           margin: 1rem .5rem .2rem .5rem;
+       }
+       .hide{
+        display: none;   
+       }
+       .show-info{
+        display: inline-block;
+   transition: display .5s ease-in;
+       }
+     
+}
