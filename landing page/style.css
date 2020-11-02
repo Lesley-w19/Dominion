@@ -61,6 +61,9 @@ header .header{
     font-style: italic;
     letter-spacing: .4rem;
 }
+.icn-header{
+    visibility: hidden;
+}
  .navBtn{
     display: flex;
     flex-direction: column;
@@ -172,50 +175,48 @@ font-size: .6rem;
 }
 div a{
   text-decoration: none;    
+  transition: color 0.3s ease-in-out;
 }
 div a:hover{
     color: orangered;
   transition: color .3s ease-in-out;
 
 }
-.section1{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/coffeshop.jpg) center no-repeat;
-    background-size: cover;
+.section1, .section2, .section3{
+    padding: 6rem;
+    border-bottom: 0.1rem solid white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-repeat: no-repeat;
     background-position: center;
-   padding: 6rem;
-   border-bottom: .1rem solid white;
+    background-size: cover;
+}
+.section1:hover, .section2:hover, .section3:hover{
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.section1:hover a, .section2:hover a, .section3:hover a{
+    color: orangered;
+}
+.section1{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/coffeshop.jpg);
+    
 }
 .section1:hover{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/coffeshop.jpg) center no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/coffeshop.jpg);
 }
 .section2{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/bakery.jpg) center no-repeat;
-    background-size: cover;
-    background-position: center;
-   padding: 6rem;
-   border-bottom: .1rem solid white;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/bakery.jpg);
 }
 .section2:hover{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/bakery.jpg) center no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/bakery.jpg);
 }
 .section3{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/restaurant.jpg) center no-repeat;
-    background-size: cover;
-    background-position: center;
-   padding: 6rem;
-   border-bottom: .1rem solid white;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/restaurant.jpg);
 }
 .section3:hover{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/restaurant.jpg) center no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url(images/restaurant.jpg);
 }
 .about{
     color: white;
@@ -259,8 +260,8 @@ background-color: rgba(176, 196, 222, 0.514);
     color: orangered;
     transition: all .2s ease-out;
 }
-.icone, .icone-header{
-    visibility: hidden;
+.icone{
+    color: transparent;
 }
 .media{
     margin-top: 2rem;
@@ -324,61 +325,77 @@ background-color: rgba(176, 196, 222, 0.514);
            left: 40%;
        }
        .ttl{
-       position: absolute;
-       top: 40%;
-       left: 22%;
+          margin: 25rem auto 0rem auto;
        }
-       .icone-header{
-           visibility: visible;
-           position: absolute;
-           bottom: 10%;
-           border-bottom: .05rem solid white;
+       .icn-header{
+        padding: .1rem 2rem;
+       margin: 13rem auto 0rem auto;
+       visibility: visible;
 
-       }
-       
-       header div{
-           height: 100vh;
-           display: flex;
-           flex-direction: column;
-           text-align: center;
+    }
+    .icon-header{
+        color: transparent;
+        padding: .2rem 5rem;
+        margin-top: .3rem;
+        font-size: 1rem;
+        border-bottom: .05rem solid transparent;
+    }
+    .header:hover .icon-header{
+        color: white;
+        border-bottom: .05rem solid white;
+        transition: all 2s ease-in;
+    }
+      header div{
+       height: 100vh;
+       display: flex;
+      flex-direction: column;
+       text-align: center;
        }
        footer{
         border: .05rem solid rgba(119, 136, 153, 0.671);
         text-align: center;
        }
-      
+       .about{
+           font-size: 1.5rem;
+       }
+      #info{
+          visibility: hidden;
+          transition: visibility  .4s  ease-in-out .3s;
+      }
+      .sectionAbout:hover #info{
+          visibility: visible;
+      }
        .links ul{
-           display: flex;
-           flex-direction: row;
-           justify-content: space-around;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
            border-bottom: .05rem solid rgba(119, 136, 153, 0.671);
        }
        .links li{
            margin: 1rem auto;
-           display: flex;
-           flex-direction: column;
+           display: grid;
+           grid-template-rows: 1;
            border: none;
+           padding: 2rem;
            border-right: .05rem solid rgba(119, 136, 153, 0.349);
        }
        .links li:nth-child(3){
            border-right: none;
+           padding-right: .5rem;
        }
        .link a{
            text-align: center;
        }
-
        .links a:hover{
               background-color: transparent;
               color: black;
-           font-size: 1.05rem;
+           font-size: 1.08rem;
        }
-       .icone{
-           visibility: hidden;
-           color: orangered;
-           transition: all 1s ease-in;
-       }
-        .icone-show{
-           visibility: visible;
+       .link li:hover .icone{
+        color: orangered;
+        margin-top: .2rem;
+        transition: all .3s ease-in;
+        visibility: visible;
        }
     
        .media{
@@ -391,13 +408,6 @@ background-color: rgba(176, 196, 222, 0.514);
        }
        .copy,.media h5{
            margin: 1rem .5rem .2rem .5rem;
-       }
-       .hide{
-        display: none;   
-       }
-       .show-info{
-        display: inline-block;
-   transition: display .5s ease-in;
        }
      
 }

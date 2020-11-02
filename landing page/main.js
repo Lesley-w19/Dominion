@@ -4,8 +4,7 @@ let navBar = document.querySelector(".navbar");
 let btn1 =document.querySelector(".navButton1");
 let btn2 = document.querySelector(".navButton2");
 let navButton = document.querySelector(".navButton");
-let link = document.querySelector(".lnk");
-let icone = document.querySelector(".icone");
+
 
 window.addEventListener('DOMContentLoaded', ()=>{
    navBar.classList.remove("active");
@@ -19,6 +18,5 @@ navBtn.addEventListener('click', ()=>{
        btn2.classList.toggle("btn2");
        navButton.style.transitionDuration = ".2s";
 });
- link.addEventListener("mouseover", ()=>{
-     icone.classList.add("icone-show");
- })
+
+
