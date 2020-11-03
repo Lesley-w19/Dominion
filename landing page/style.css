@@ -27,17 +27,14 @@ h4{
 h5,h6{
     font-size: .9rem;
 }
-body{
-    position: absolute;
-}
-header .header{
+ header .header{
     /* background-color: rgba(119, 136, 153, 0.863); */
     background-color: rgba(0, 0, 0, 0.863);
     padding: 1.5rem;
 }
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
 }
 .icon{
@@ -83,14 +80,14 @@ header .header{
 }
 .btn1{
     transform: rotate(-45deg);
-    transition: .2s ease-in-out;
-    margin: 0;
+    transition: .3s ease-in-out;
+    position: absolute;
+    margin:0;
 }
  .btn2{
     transform: rotate(45deg);
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
     position: absolute;
-    top: 10%;
 }
 .navbar{
     background-color: white;
@@ -102,7 +99,9 @@ header .header{
 .active{
    height: 68vh;
 }
-
+.menu{
+    visibility: hidden;
+}
 .navbar .abt li{
     margin: 1rem auto 0.2rem auto;
     padding: 1.2rem;
@@ -138,13 +137,13 @@ header .header{
 .navlinks ul{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .navlinks ul li{
-    margin: 1rem 1rem .5rem 1rem;
+    margin: .5rem 1rem;
     padding: .2rem;
 }
 .navlinks ul li a{
-    margin-left: 1rem;
     text-transform: uppercase;
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -152,10 +151,13 @@ header .header{
     letter-spacing: .1rem;
     border-bottom: .05rem solid white;
 }
+.icon-nav{
+    visibility: hidden;
+}
 .navlinks a:hover{
       color: orangered;
     border-bottom: .05rem solid orangered;
-    transition: all .4s ease-in;
+    transition: all .3s ease-in;
 }
 .navlinks .copy{
     margin: 0.5rem auto 0.2rem auto;
@@ -309,15 +311,78 @@ background-color: rgba(176, 196, 222, 0.514);
 
 
 
-@media (min-width:900px){
-       body{
+@media (min-width:768px){
+    
+    .header{
+        position: fixed;
+        height: 100vh;
+        width: 30vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    .navBtn{
+        position: relative;
+    }
+   .menu{
+       position: absolute;
+        visibility: visible;
+        margin-top: 1.5rem;
+        margin-left: -1rem;
+        color: white;
+        font-size: 1rem;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+      }
+       .navbar{
+           display: block;
+           position: absolute;
+           margin-left: 30vw;
+           width: 0vw;
            height: 100vh;
-           display: flex;
-        flex-direction:row;
-        justify-content: space-around; 
+          background-color: black;
+          opacity: .85;
+          overflow-x: hidden;
+          transition: all .1s ease-in;
        }
-       .header{
-           position: relative;
+       .active{
+           width: 30vw;
+       }
+       .navbar ul{
+           margin-top: 2rem;
+       }
+    .about p , .place {
+          color: white;
+       }
+    .about:hover p, .about:hover .place{
+        color: orangered;
+        font-weight: bolder;
+        transition: all .3s ease-in-out;
+    }
+    .navlinks ul{
+        position: absolute;
+        bottom: 10%;
+        left: 5.5%;
+    }
+    .navlinks ul li{
+        display: flex;
+        flex-direction: column;
+    }
+    .icon-nav{
+        visibility: visible;
+         margin-bottom: 2rem;
+         color: orangered;
+         font-size: 1rem;
+    }
+     .navlinks li:hover .icon-nav{
+       color: white;
+       transition: all .3s ease-in-out;
+     }
+       article{
+           min-height: 100vh;
+           width: 68.3vw;
+           margin-left: 30vw;
        }
        .navBtn{
            position: absolute;
@@ -325,6 +390,8 @@ background-color: rgba(176, 196, 222, 0.514);
            left: 40%;
        }
        .ttl{
+      position: absolute;
+       left: 3%;
           margin: 25rem auto 0rem auto;
        }
        .icn-header{
@@ -343,7 +410,13 @@ background-color: rgba(176, 196, 222, 0.514);
     .header:hover .icon-header{
         color: white;
         border-bottom: .05rem solid white;
-        transition: all 2s ease-in;
+        transition: all 1.5s ease-in;
+    }
+    .header:hover .icon-header:nth-child(2){
+        transition: all 2.5s ease-in;
+    }
+    .header:hover .icon-header:nth-child(3){
+        transition: all 3.5s ease-in;
     }
       header div{
        height: 100vh;
@@ -355,13 +428,29 @@ background-color: rgba(176, 196, 222, 0.514);
         border: .05rem solid rgba(119, 136, 153, 0.671);
         text-align: center;
        }
-       .section1, .section2, .section3{
-           transition: all .4s ease-in-out;
+       .section0{
+           border-bottom: .4rem solid black;
        }
-       .about{
+       .section0 h5{
+        font-size: 1.15rem;
+        letter-spacing: .3rem;
+       }
+       .section1{
+           border-top: .1rem solid white;
+       }
+       .section1, .section2, .section3{
+           transition: all 2s ease-in-out;
+       }
+       .abt span{
            font-size: 1.5rem;
        }
+       .place{
+           margin-top: 1rem;
+           font-size: 2rem;
+       }
+       
       #info{
+          font-size: 1.05rem;
           visibility: hidden;
       }
       .sectionAbout:hover #info{
@@ -396,7 +485,7 @@ background-color: rgba(176, 196, 222, 0.514);
        .link li:hover .icone{
         color: orangered;
         margin-top: .2rem;
-        transition: all .5s ease-in;
+        transition: all .4s ease-in;
         visibility: visible;
        }
     
@@ -412,4 +501,11 @@ background-color: rgba(176, 196, 222, 0.514);
            margin: 1rem .5rem .2rem .5rem;
        }
      
+}
+@media(min-width:950px){
+    .ttl{
+        position: absolute;
+        left: 10%;
+               margin: 25rem auto 0rem auto;
+            }
 }
